@@ -69,7 +69,7 @@ class KnapsackSolver:
             min_value: int = float('inf')  # Giá trị nhỏ nhất khởi tạo cho Min
             selected_items:List[Item] = []
 
-            if self.problem == Problem.OPTIMIZE_QUANTITY or self.problem == Problem.OPTIMIZE_VALUE:
+            if self.problem == Problem.OPTIMIZE_VALUE:
                 if self.is_enable_minimizer:
                     # Tính toán danh sách vật phẩm dự kiến để Minimizer có thể chọn
                     expected_selected_items: List[Item] = state.remaining_items[:]
