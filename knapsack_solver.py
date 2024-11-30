@@ -127,8 +127,9 @@ class KnapsackSolver:
         )
         
         # Gọi hàm minimax với alpha = -∞ và beta = ∞ để bắt đầu tìm kiếm
-        if self.problem == Problem.OPTIMIZE_VALUE_BOTH:
-             return self.minimax(initial_state, True, float('-inf'), float('inf'))
+        # if self.problem == Problem.OPTIMIZE_VALUE_BOTH:
+        #     max_value, selected = self.minimax(initial_state, True, float('-inf'), float('inf'))
+        #     return max_value, selected
         
         self.minimax(initial_state, True, float('-inf'), float('inf'))
         return self.max_value, self.selected_items
